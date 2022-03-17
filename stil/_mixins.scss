@@ -1,0 +1,231 @@
+@import "var";
+
+
+@mixin body{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: $fontprim;
+    h1{
+        font-size: 1.8em;
+    }
+
+    h2{
+        color: $bojasek;
+        text-transform: uppercase;
+        font-size: 1.3em;
+    }
+    p{
+        color: $bojaprim;
+    }
+    a{
+        text-decoration: none;
+    }
+ } 
+
+}
+
+@mixin clearfix {
+	&:before, &:after {
+	    content: "";
+	    display: table;
+	}
+	&:after {
+	    clear: both;
+	}
+}
+
+@mixin t820 {
+
+    @media screen and (max-width: 820px) {
+
+    nav{ 
+        ul{
+            li{
+                padding-left: .3em;
+                padding-right: .3em; 
+
+            }
+        }
+    }
+    .naslov{
+        h1{
+            padding-top: 2em;
+            font-size: 1.8em;
+            padding-bottom: 1em;
+           
+        }
+        a{
+            padding: .5em 1.5em;
+            font-size: 1.1em;
+        }     
+    }
+    .products{
+        
+        .column{
+            width: 100%;
+            display: inline-block;
+            padding-bottom: 2em;
+            @include clearfix();
+            .tekst {
+                width: 85%;
+                 float: left;
+                 
+                 h2{
+                     text-align: left;
+                     font-size: 1.1em;
+                     padding-bottom: 1em;
+                 }
+                 p{
+                     text-align: right;
+
+                 }
+                
+        }
+            .slika{
+                float: right;
+                width: 15%; 
+                padding-top: 3em;
+                padding-left: 1em;
+                img{
+                width: 100px;
+                height: 100px;
+                }
+                
+                
+            }
+        }
+    }
+    
+
+        .choose{
+            display: inline-block;
+            width: 100%;
+            .tab1, .tab2, .tab3 {
+                width: 40%;
+                text-align: center;
+                padding-bottom: 1.5em;
+                .red3{
+                    td{
+                        a{
+                        padding-top: 2em;
+                        text-decoration: none;
+                        color: white;
+                        font-size: .8em;
+                        text-align: center;
+                        }
+                        .desktop{
+                            visibility: hidden;
+                        }
+                        .mob{
+                            
+                            visibility: visible
+                        }
+                    } 
+                } 
+            }
+        }
+    }
+}
+
+@mixin m620 {
+    @media screen and (max-width: 620px){
+
+        nav{
+            height: 15em;
+            ul{
+                li{
+                    
+                    border-bottom: 1px solid $bojasek;
+                    width: 100%;
+                    padding-top: .5em;
+                    padding-bottom: .5em;
+                    font-size: 1em;
+                }
+                .logo{
+                    display: none;
+                }
+            }
+        }
+        .naslov{
+           display: none;
+        }
+        .products{
+            width: 100%;
+            h1{
+                text-align: center;
+                font-size: 1.5em;
+            }
+            .column{
+                width: 100%;
+                padding-left: auto;
+                padding-right: auto;
+                
+                .tekst{ 
+                    h2{
+                        text-align: center;
+                    }
+                    p{
+                        text-align: left;
+                    }
+                }
+                .slika{
+                    display: none;
+                } 
+            }
+        }
+        .choose{
+            .sadrzaj{
+                width: 100%;
+            }
+            h1{
+                font-size: 1.5em;
+                padding-right: 0px;
+            }
+            
+            .tab1, .tab2, .tab3 {
+
+            width: 80%;
+            }
+        }
+        footer{
+            .column{
+               
+                .col1{
+                    
+                    width: 100%;
+                    padding-top: 15em;
+                }
+                .col2{
+                   width: 100%;
+                    float: none;
+                    width: 100%;
+                    padding-top: -20em;
+                    padding-left: 0px;
+                    ul{
+                        padding-left: 0px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        
+                        li{
+                            display: inline;
+                            list-style: square;
+                            padding-left: 1em;
+                        }
+                    }
+                   
+                }
+            }
+        }
+        
+
+
+
+
+
+    
+    }
+}
+
+

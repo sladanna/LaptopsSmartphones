@@ -1,0 +1,226 @@
+@import "var";
+@import "mixins";
+
+
+@include body;
+
+nav{
+    background-color: #ffff;
+    height: 55px;
+   ul{
+      list-style: none;
+      text-align: center;
+       li{
+           display: inline-block;
+           padding-left: 1em;
+           padding-right: 1em; 
+           &:hover{
+               a{
+                   color: $bojater;
+               }
+           }
+       }
+   }
+    a{
+        color: $bojaprim;
+        vertical-align: middle;
+       
+        img{
+            width: 55px;
+            height: 55px; 
+        }
+    }
+}
+.naslov{
+    height: 100vh;
+    background-image: url('../slike/hero.png');
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1, a{
+        color: #ffff;
+        font-weight: normal;
+    }
+    h1{
+        padding-top: 6em;
+        font-size: 2.5em;
+        padding-bottom: 1em;
+       
+    }
+    a{
+        font-size: 1.5em;
+        border: 1px solid white;
+        padding: .5em 1em;
+        &:hover{
+            background-color: white;
+            color: $bojater;
+        }
+    }
+}
+
+.products{
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+    
+    h1{
+        text-transform: uppercase;
+        padding: 2em;
+        text-align: left;
+    }
+    .column{
+        display: inline-block;
+        width: 23%;
+        text-align: justify;
+        padding-left: 2em; 
+        .tekst{
+            h2{
+            padding-bottom: .7em;
+            text-align: right;
+            font-size: 1.2em;
+        }
+        }
+        .slika{
+            text-align: center;
+        img{
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            }
+        }
+    }
+}
+
+.choose{
+    width: 100%;
+    padding-top: 2em;
+    background-color: $bojasback;
+
+    .sadrzaj{
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 4em;
+    }
+    
+    h1{
+            text-align: right;
+            text-transform: uppercase;
+            padding-bottom: 2em;
+            padding-right: 4em;
+        }
+
+    .tab1, .tab2, .tab3 {
+
+            padding-right: 1em; 
+            display: inline-block; 
+            width: 30%;
+            border-spacing: 0px; 
+        .red1, .red3{
+                background-color: $bojaprim;
+                color: white;
+                height: 3em; 
+            }
+            .red3{
+                td{
+                    a{
+                    padding-top: 2em;
+                    text-decoration: none;
+                    color: white;
+                    font-size: .8em;
+                    text-align: center;
+                    }
+                    .mob{
+                        
+                        visibility: hidden;
+                    
+                    }
+                   
+                
+            } 
+        }
+            
+            .red2{
+                td{
+                    border: 1px solid $bojaprim;
+                }
+            }
+           
+        
+
+        &:hover {
+            .red1, .red3{
+                background-color: $bojater;
+            }
+            .red2{
+                td{
+                border-color: $bojater;
+                }
+            } 
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    background-color: $bojaprim;
+    @include clearfix;
+    padding-bottom: 9em;
+    padding-top: 4em;
+    h2{
+        color: $bojater;
+        font-size: 1.3em;
+        text-transform: none;
+        padding-bottom: 1em;
+    }
+    
+        .column{
+            
+            width: 100%;
+            padding-top: 2em;
+            display: inline-block;
+            padding-left: 3em;
+
+            .col1{ 
+                width: 50%;
+                float: left;
+                
+                p{
+                    color: #ffff;
+                    text-align: justify;
+                    line-height: 1.5em;
+                    font-size: 1em;
+                }
+            }
+            .col2{
+                width: 30%;
+                float: right; 
+                padding-left: 2em;
+                
+                ul{
+                    padding-left: 1.5em;   
+                    
+                    li{
+                    list-style: square;
+                    color: #ffff;
+                    line-height: 1.5em;   
+                             
+                a{
+                    color: #ffff;
+                    
+                }
+              }
+             }
+            }
+        }
+    }
+
+
+@include t820;
+@include m620;
+

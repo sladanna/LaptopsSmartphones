@@ -1,0 +1,312 @@
+@import 'mixins';
+@import 'vars';
+
+@include main;
+
+nav {
+    line-height: 2em;
+
+    ul {
+        list-style: none;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            padding: 0.5em;
+
+            a {
+                text-decoration: none;
+                color: $dark-blue;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+
+        img {
+            width: 2em;
+        }
+    }
+}
+
+main {
+    background-image: url("../slike/hero.jpeg");
+    height: 100vh;
+    background-size: cover;
+    text-align: center;
+    
+    h1 {
+        padding-top: 5em;
+        color: white;
+        font-weight: normal;
+        padding-bottom: 1em;
+    }
+
+    a {
+        border: 1px solid white;
+        padding: 0.5em 2em;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            background-color: white;
+            color: $red;
+        }
+    }
+}
+
+section {
+    padding: 4em 10em;
+    text-align: center;
+}
+
+h2 {
+    color: $dark-blue;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.products {
+    @include clearfix;
+
+    .product {
+        float: left;
+        width: 25%;
+        padding: 1em;
+    
+        h3 {
+            color: $h3-color;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            font-size: 1em;
+            text-align: right;
+        }
+    
+        p {
+            color: $h3-color;
+            text-align: justify;
+            font-size: 13px;
+        }
+    
+        img {
+            width: 60%;
+        }
+    }
+}
+
+.choose {
+    background-color: $grey-background;
+    @include clearfix;
+
+    h2 {
+        text-align: right;
+    }
+
+    .box {
+        border: 1px solid $dark-blue;
+        float: left;
+        width: 33%;
+        margin: 0.1em;
+
+        h4 {
+            color: $grey-background;
+            background-color: $dark-blue;
+            font-weight: normal;
+            padding: 1em;
+        }
+
+        p {
+            padding: 1em;
+        }
+
+        button {
+            text-decoration: none;
+            color: $grey-background;
+            background-color: $dark-blue;
+            width: 100%;
+            border: none;
+            padding: 1em;
+            font-size: 14px;
+            font-family: $my-font;
+        }
+
+        &:hover {
+            border: 1px solid $red;
+        }
+    }
+}
+
+footer {
+    padding: 4em 10em;
+    background-color: $dark-blue;
+    @include clearfix;
+
+    h3 {
+        color: $red;
+        margin-bottom: 1em;
+    }
+
+    p, a {
+        color: $grey-background;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .about-us {
+        float: left;
+        width: 50%;
+        padding-right: 5em;
+    }
+
+    .quick-links {
+        float: right;
+        width: 50%;
+        padding-left: 20em;
+
+        ul {
+            list-style: none;
+
+            li {
+                
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    section {
+        padding: 4em 4em;
+    }
+
+    .products {
+
+        .product {
+            float: left;
+            width: 100%;
+            padding: 1em;
+        
+            h3 {
+                text-align: left;
+            }
+        
+            p {
+                float: left;
+                width: 80%;
+            }
+        
+            img {
+                float: right;
+                width: 15%;
+            }
+        }
+    }
+
+   footer {
+
+        .about-us {
+            float: left;
+            width: 50%;
+            padding-right: 4em;
+        }
+
+        .quick-links {
+            float: right;
+            width: 50%;
+            padding-left: 13em;
+        }
+   }
+}
+
+@media screen and (max-width: 960px) {
+
+    nav {
+    
+        ul {
+    
+            li {
+                display: block;
+                padding: 0.5em;
+                border-bottom: 1px solid black;
+    
+                a {
+                    font-size: 1.5em;
+                }
+            }
+    
+            img {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        display: none;
+    }
+
+    .products {
+        
+        h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+         
+        .product {
+
+            h3 {
+                text-align: center;
+                font-size: 1.5em;
+            }
+            
+            p {
+                width: 100%;
+                font-size: 1.5em;
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .choose {
+
+        .box {
+            width: 100%;
+        }
+    }
+
+    footer {
+
+        .about-us {
+            float: none;
+            width: 100%;
+            padding: 0;
+        }
+    
+        .quick-links {
+            margin-bottom: 1em;
+            float: none;
+            width: 100%;
+            padding: 0;
+    
+            ul {
+    
+                li {
+                    display: inline-block;
+                }
+            }
+        }
+   }
+}
+
+
+
+
